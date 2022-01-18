@@ -10,7 +10,7 @@ An audio-visual experiment  featuring:
 
 Same example on [CodePen](https://codepen.io/quentin-mckay/pen/dyVrxrE) and [Netlify](https://pendulum-wave.netlify.app/)
 
-Originally inspired by [this wonderful example](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO)
+Originally inspired by this [example on YouTube](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO)
 
 ## Usage Notes
 
