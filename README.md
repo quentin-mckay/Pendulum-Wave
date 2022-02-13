@@ -1,6 +1,6 @@
 # Pendulum Wave
  
-An audio-visual experiment featuring:
+An [audio-visual experiment](https://pendulum-wave.netlify.app) featuring:
 
 - visuals using [p5.js](https://p5js.org/)
 - web audio synthesis using [Tone.js](https://tonejs.github.io/)
@@ -8,9 +8,9 @@ An audio-visual experiment featuring:
 - GUI using [dat.gui](https://github.com/dataarts/dat.gui)
 
 
-Same example on [CodePen](https://codepen.io/quentin-mckay/pen/dyVrxrE) and [Netlify](https://pendulum-wave.netlify.app/)
+Same example on [CodePen](https://codepen.io/quentin-mckay/pen/dyVrxrE).
 
-Originally inspired by [this example](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO)
+Originally inspired by [this example](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO).
 
 ## Usage Notes
 
