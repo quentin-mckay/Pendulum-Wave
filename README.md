@@ -1,6 +1,6 @@
 # Pendulum Wave
  
-An audio-visual experiment  featuring:
+An audio-visual experiment featuring:
 
 - visuals using [p5.js](https://p5js.org/)
 - web audio synthesis using [Tone.js](https://tonejs.github.io/)
