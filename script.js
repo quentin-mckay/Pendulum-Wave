@@ -20,7 +20,7 @@ let C = {
   ballLinesEnabled: true,
   sideLinesEnabled: true,
   root: 48,
-  scl: 'minor pentatonic',
+  scalePreset: 'minor pentatonic',
   scale: '0 3 5 7 10',
   noteDuration: 100,
   velocity: 80,
@@ -40,11 +40,13 @@ let C = {
 }
 
 let scaleMenu = {
-  'major': '0 4 7',
-  'minor': '0 3 7',
-  'major 7': '0 4 7 11',
-  'minor 7': '0 3 7 10',
-  'dom 7': '0 4 7 10',
+  'major chord': '0 4 7',
+  'minor chord': '0 3 7',
+  'major 7 chord': '0 4 7 11',
+  'minor 7 chord': '0 3 7 10',
+  'dom 7 chord': '0 4 7 10',
+  'major scale': '0 2 4 5 7 9 11',
+  'minor scale': '0 2 3 5 7 8 10',
   'major pentatonic': '0 2 4 7 9',
   'minor pentatonic': '0 3 5 7 10'
 }
@@ -74,8 +76,9 @@ let noteControls = gui.addFolder('Notes')
 noteControls.open()
 noteControls.add(C, 'bothSidesTrigger').name('both sides trigger')
 noteControls.add(C, 'root', 1, 127, 1).onFinishChange(setMidiNotes)
-noteControls.add(C, 'scale').onFinishChange(setMidiNotes)
-noteControls.add(C, 'scl', scaleMenu).onFinishChange(setMidiNotes)
+
+noteControls.add(C, 'scale').onFinishChange(setMidiNotes).listen()  // listen() updates UI if we change C.scale within code
+noteControls.add(C, 'scalePreset', scaleMenu).onFinishChange(scaleMenuSelected)
 
 
 
@@ -114,6 +117,7 @@ synthControls.add(C, 'volume', -36, 0, 1).name('volume (dB)').onChange(setSynthV
 
 // waveControls.add(C, 'baseFrequency', 0, .2).name('base frequency').onChange(setVelocities)
 // waveControls.add(C, 'frequencyOffset').name('frequency offset').onChange(setVelocities)
+
 
 // ================================================================
 // Ball Class =====================================================
@@ -368,7 +372,7 @@ function windowResized() {
 }
 
 function mousePressed() {
-
+  
 }
 
 // =======================================================
@@ -380,6 +384,7 @@ function initWave() {
 }
 
 function setMidiNotes() {
+  // convert UI string of intervals to array of numbers
   let scaleIntervals = C.scale.split(' ').map(str => Number(str))
   
   midiNotes = []
@@ -388,6 +393,13 @@ function setMidiNotes() {
     
     midiNotes[i] = C.root + scaleIntervals[i % scaleIntervals.length] + (octave * 12)
   }
+}
+
+function scaleMenuSelected() {
+  console.log(C.scalePreset)
+
+  C.scale = C.scalePreset
+  setMidiNotes()
 }
 
 function setMidiPort() {
