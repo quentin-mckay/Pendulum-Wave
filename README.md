@@ -1,16 +1,19 @@
 # Pendulum Wave
- 
-An [audio-visual experiment](https://pendulum-wave.netlify.app) featuring:
+![Pendulum Wave screenshot](img/screenshot.jpg)
 
-- visuals using [p5.js](https://p5js.org/)
-- web audio synthesis using [Tone.js](https://tonejs.github.io/)
-- MIDI output using [WebMidi.js](https://webmidijs.org/)
-- GUI using [dat.gui](https://github.com/dataarts/dat.gui)
+[Live project on Netlify](https://pendulum-wave.netlify.app/)
+
+An audio-visual experiment featuring:
+
+- visuals built with [p5.js](https://p5js.org/)
+- web audio synthesis built with [Tone.js](https://tonejs.github.io/)
+- MIDI output built with [WebMidi.js](https://webmidijs.org/)
+- GUI built with [dat.gui](https://github.com/dataarts/dat.gui)
 
 
 Same example on [CodePen](https://codepen.io/quentin-mckay/pen/dyVrxrE).
 
-Originally inspired by [this example](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO).
+Originally inspired by [this youtube video](https://www.youtube.com/watch?v=JsIgubUjTck&ab_channel=TedO).
 
 ## Usage Notes
 
